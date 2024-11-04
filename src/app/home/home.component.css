@@ -1,0 +1,169 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+html, body {
+  height: 100%;
+}
+
+.content h1:hover{
+-webkit-text-stroke: 2px #fff;
+color:transparent;
+}
+.hero
+{
+  display: flex; /* This enables Flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  width: 100%;
+  height: 94vh;
+  background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3)),url('\src\assets\images\company1.jpg');;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.content
+{
+  
+  text-align:center ;
+}
+.content h1{
+
+  font-size: 100px;
+  color:#fff;
+  font-weight:600;
+}
+
+.home
+{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding:50px 8% 0;
+  background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3))
+  
+}
+.home-content
+{
+  max-width: 630px;
+
+}
+
+.home-content h1 {
+  
+  color:#fff;
+  font-weight:600;
+  font-size: 70px;
+  line-height: 1.1;
+}
+.home-content h1:hover{
+  -webkit-text-stroke: 2px #fff;
+  color:transparent;
+  }
+
+
+.home-content h3{
+
+  font-size: 20px;
+  font-weight:600;
+  color: midnightblue;
+}
+.home-content p{
+  font-size: 16px;
+  margin: 15px 0 30px;
+}
+
+/* CSS Card container */
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* CSS for individual cards */
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Card overlay for hover effect */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-overlay h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-overlay p {
+  font-size: 16px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.1); /* Zoom-in effect on hover */
+}
+
+.card:hover .card-overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+.container
+{
+  display:block; /* This enables Flexbox */
+  justify-content: center;
+  align-items: center;
+  background: rgb(142, 124, 124);
+  min-height: 100vh;
+  
+}
+.back
+{
+  position: relative;
+  display: flex; /* This enables Flexbox */
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding:50px;
+}
+.container .image-card
+{
+  position: relative;
+  width:350px;
+  height:300px;
+  background: white;
+  border-radius:20px;
+  box-shadow:0 35px 80px rgba(0, 0, 0, 0.15);
+
+}
+

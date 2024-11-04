@@ -1,0 +1,35 @@
+<body>
+  
+
+<div class="container d-flex flex-column justify-content-center align-items-center" style="height: 70vh;">
+  <h2>Login</h2>
+<form  (ngSubmit)="loginSubmit(loginForm)" #loginForm="ngForm" novalidate
+style="width: 50%;">
+
+
+<label for="role1" class="form-label">Role</label>
+<select class="form-select" id="role1"  required>
+  <option selected disabled>Select a role</option>
+  <option value="1">HR</option>
+  <option value="2">Employee</option>
+</select>
+
+ <br>
+  <div class="mb-3">
+    <label for="Email1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="Email" name="employeeEmail" [(ngModel)]="user.employeeEmail" #employeeEmail="ngModel">
+    <div id="emailHelp" class="form-text text-danger" *ngIf="employeeEmail.dirty && employeeEmail.invalid">Email can't be empty.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password1" name="password" [(ngModel)]="user.password" #password="ngModel" required>
+  </div>
+  <div id="password" class="form-text text-danger" *ngIf="password.dirty && password.invalid">Password can't be empty.</div>
+  
+  <button type="submit" class="btn btn-primary " (click)="loginSubmit(loginForm)" [disabled]="loginForm.invalid">Submit</button>
+</form>
+
+</div>
+
+</body>

@@ -1,0 +1,41 @@
+
+
+<div class="container d-flex flex-column justify-content-center align-items-center">
+  <br>
+  <h2>Delete Employee</h2>
+  <form (ngSubmit)="deleteSubmit(deleteForm)" #deleteForm="ngForm" novalidate style="width: 50%;">
+    <hr>
+
+    <label for="Id1" class="form-label">Employee Id</label>
+    <select class="form-select" (change)="selectEmployeeId()" id="employeeId" name="Id" [(ngModel)]="employee.employeeId" #employeeId="ngModel" required>
+      
+      <option [value]="employee.employeeId" *ngFor="let employee of curdService.employees">{{employee.employeeId}}</option>
+    </select>
+    <br>
+
+    <div class="mb-3">
+      <label for="name1" class="form-label">Employee Name</label>
+      <input type="text" class="form-control" id="name1" name="name" [(ngModel)]="employee.employeeName" #employeeName="ngModel" required>
+      <div id="employeeNameHelp" class="form-text text-danger" *ngIf="employeeName.invalid && (employeeName.dirty || employeeName.touched)">
+        Name can't be empty.
+      </div>
+    </div> 
+
+    <div class="mb-3">
+      <label for="departmentId" class="form-label">Department Id</label>
+      <input type="number" class="form-control" id="departmentId" name="departmentId" [(ngModel)]="employee.department.departmentId" #departmentId="ngModel" required>
+      <div id="departmentIdHelp" class="form-text text-danger" *ngIf="departmentId.invalid && (departmentId.dirty || departmentId.touched)">
+        Department Id can't be empty.
+      </div>
+    </div>
+
+   
+    <button class="btn btn-danger " type="button" [disabled]="deleteForm.pristine || deleteForm.invalid" (click)="deleteSubmit(deleteForm)">Delete</button>
+  </form>
+
+  <div class="alert alert-success" role="alert" *ngIf="curdService.employeeDeleted">
+    Employee was deleted Succussfully.
+  </div>
+
+
+</div>

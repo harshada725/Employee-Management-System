@@ -1,0 +1,23 @@
+
+
+<div class="container">
+<p class="h1 my-3">Departments </p>
+<hr>
+
+<table class="table caption-top">
+  <caption>List of Departments</caption>
+  <thead>
+    <tr>
+      <th scope="col">Department ID</th>
+      <th scope="col">Department Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let department of curdService.departments">
+      <th scope="row">{{department.departmentId}}</th>
+      <td>{{department.departmentName}}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>

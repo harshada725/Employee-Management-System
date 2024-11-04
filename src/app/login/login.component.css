@@ -1,0 +1,23 @@
+/* *{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background-color: rgba(220, 187, 230, 0.393);
+}
+.container
+{
+width:90vmin;
+background-color:white;
+position:absolute;
+transform:translate(-50%,-50%);
+top:50%;
+left:50%;
+padding:80px 50px;
+border-radius:10px;
+box-shadow: 0 20px 40px rgba(38,33,61,0.2);
+
+
+} */
